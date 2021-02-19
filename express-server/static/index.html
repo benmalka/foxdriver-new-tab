@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tab Opener Page</title>
+        <script>
+            const tabs = new Map();
+            function createTab(tabId){
+                const url = "http://" + window.location.hostname + ":" + window.location.port + "/firefox/" + tabId
+                const tab = window.open(url, "_blank")
+                tabs.set(tabId, tab)
+                return true
+            }
+
+            function closeTab(tabId){
+                const tab = tabs.get(tabId)
+                if (!tab){
+                    return false
+                }
+                tab.close()
+                return true
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Tab Opener Page</h1>
+    </body>
+</html>
