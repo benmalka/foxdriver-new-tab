@@ -4,6 +4,7 @@
   "description": "A solution concept of how to run firefox automation on number of tabs",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
